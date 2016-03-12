@@ -1,16 +1,29 @@
-/* react hello world with ES5 declaration */
+/* react hello world with ES6 declaration */
 
-var React = require('react');
-var ReactDom = require('react-dom');
+import React, {Component} from 'react'
+import {render} from 'react-dom'
 
-var Hello = React.createClass({
-  render: function () {
-    return <div> Hello world, Fluent US is done temp really </div>
+// createClass() syntax
+const Hello = React.createClass({
+  render () {
+    return <div> Hello world with ES6</div>
   }
-});
+})
 
+// classes with extending component
+class Hello2 extends Component {
+  render () {
+    return <div> Hello world with ES6 using Component syntax </div>
+  }
+}
 
-ReactDom.render(<Hello/>, document.body.firstChild);
+// stateless functionnal component, the default declaration ?
+const Hello3 = (props) => {
+  return (
+    <div> Hello world, SF,  from {props.name}</div>
+  )
+}
 
-
-
+render(<Hello/>, document.body.firstChild)
+render(<Hello2/>, document.body.firstChild)
+render(<Hello3 name='jm' />, document.body.firstChild)
