@@ -1,31 +1,11 @@
-/* react hello world with ES6 declaration */
+/**
+ * Created by jean-michel-legrand on 12/03/16.
+ */
 
-import React, {Component} from 'react'
+import React from 'react'
 import {render} from 'react-dom'
+import App from './app'
+// the way to load css with webpack!
+import './styles/main.css'
 
-var root = React.createElement('div')
-
-// createClass() syntax
-const Hello = React.createClass({
-  render () {
-    return <div> Hello world with ES6</div>
-  }
-})
-
-// classes with extending component
-class Hello2 extends Component {
-  render () {
-    return <div> Hello world with ES6 using Component syntax </div>
-  }
-}
-
-// stateless functionnal component, the default declaration ?
-const Hello3 = (props) => {
-  return (
-    <div> Hello world, SF,  from {props.name}</div>
-  )
-}
-
-render(<Hello/>, document.body.firstChild)
-render(<Hello2/>, document.body.firstChild)
-render(<Hello3 name='jm' />, root)
+render(<App name='jm' />, document.body.firstChild)
