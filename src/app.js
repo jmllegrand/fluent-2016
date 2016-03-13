@@ -4,7 +4,7 @@
 
 import React from 'react'
 import LoginPage from './pages/login'
-
+import Nav from './components/nav'
 const App = (props) => {
   let page
   console.log(props.url)

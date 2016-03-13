@@ -28,4 +28,4 @@ const Hello3 = (props) => {
 
 render(<Hello/>, document.body.firstChild)
 render(<Hello2/>, document.body.firstChild)
-render(<Hello3 name='jm' />, root)
+render(<Hello3 name='jm' />, document.body.firstChild)
