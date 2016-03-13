@@ -6,6 +6,6 @@ import React from 'react'
 import {render} from 'react-dom'
 import App from './app'
 // the way to load css with webpack!
-import './styles/main.css'
+import './styles/main.styl'
 
-render(<App name='jm' />, document.body.firstChild)
+render(<App url={window.location.pathname} />, document.body.firstChild)

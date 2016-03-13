@@ -195,6 +195,8 @@ app.js
 * the definition of the app component
 * the component does not care how it get loaded, it is the responsability of root.js
 
+
+page/login.js
 ### about universal application & performance
 Basic idea: if you are single app page, why don't u run the appp on the server. This will avoid the white page 
 death while 500k  download for ember
@@ -229,8 +231,25 @@ concept: run the static file on the server
 
 2 metrics to take in consideration
 
-**
-** 
+* metric A
+* metric B
 
 about caching 
+
+For performnace, use system fonts
+
+### about client side routing
+
+The goals is two-fold:
+
+* read the url 
+* displaying the right component
+
+push state support 
+what the matter: be familiar with the problems
+
+
+
+
+
 

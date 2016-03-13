@@ -3,10 +3,20 @@
  */
 
 import React from 'react'
+import LoginPage from './pages/login'
 
 const App = (props) => {
+  let page
+  console.log(props.url)
+  if (props.url === '/') {
+    page = <LoginPage/>
+  }
   return (
-    <div> Hello world, SF, from {props.name}</div>
+    <div>
+      <div className='container'>
+        {page}
+      </div>
+    </div>
   )
 }
 
